@@ -1,0 +1,241 @@
+/* EN-TETE */
+header{
+    min-height: 60px;
+}
+
+.flex2{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#logo{
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+#logo img{
+    height: 50px;
+    vertical-align: middle;
+}
+
+#header-options{
+    display: none;
+}
+
+
+/* MENU 1 - MENU PRINCIPAL */
+#menu1{
+    display: none;
+    margin-top: 5px;
+}
+
+#menu1 li{
+    display: block;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#menu1 li:hover{
+    background-color: #b3995d;
+}
+
+#menu1 a{
+    display: block;
+    padding:10px;
+    color: black;
+    text-decoration: none;
+}
+
+#menu1 a:hover{
+    color: white;
+}
+
+
+/* PARTIE PRINCIPALE DE LA PAGE */
+main{
+    display: flex;
+    width: 540px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+
+/* MENU 2 - SOUS-MENU A GAUCHE */
+#menu2{
+    width: 180px;
+    min-height: 500px;
+    background-color: #fff;
+    font-size: 0.9em;
+}
+
+
+/* CONTENU CENTRAL */
+section{
+    width: 360px;
+}
+
+
+/* BLOC ANNEXE A DROITE */
+aside{
+    display: none;
+}
+
+
+/* CARROUSEL ACCUEIL */
+.s-home {
+    top: 0;
+}
+
+.m-100 {
+    margin-top: 0;
+}
+
+
+/* PAGE ACCUEIL */
+.accueilChambres {
+    border: 1px solid #b3995d;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.accueilChambres .description {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.accueilChambres .separation1 {
+    border-left: none;
+    border-top: 1px solid #b3995d;
+    width: 100%;
+}
+
+.accueilRestaurant .separation2 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.accueilRestaurant .separation2 .detailRestaurant {
+    border-bottom: 1px solid #b3995d;
+    border-left: none;
+}
+
+.accueilSpa .separation3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.accueilSpa .separation3 .detailSpa {
+    border-bottom: 1px solid #b3995d;
+    border-right: none;
+    width: 100%;
+}
+
+.accueilSpa .separation3 .soins {
+    width: 100%;
+}
+
+
+/* SEPARATION 1 - CHOIX ENTRE CHAMBRES ET SUITES */
+.separation1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.separation1 .chambre1, .separation1 .chambre3 {
+    border-right: none;
+}
+
+.separation1 .chambre3 {
+    border-bottom: 1px solid #b3995d;
+}
+
+.separation1 .chambre1, .separation1 .chambre2, .separation1 .chambre3, .separation1 .chambre4 {
+    height: 300px;
+    width: 100%;
+}
+
+.separation1 .c-fondNoir1, .separation1 .c-fondNoir2, .separation1 .c-fondNoir3, .separation1 .c-fondNoir4 {
+    height: 300px;
+}
+
+.separation1 .detail {
+    height: 260px;
+}
+
+
+/* SEPARATION 2 - CHOIX ENTRE LES CARTES DU RESTAURANT */
+.separation2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.separation2>div {
+    width: 100%;
+}
+
+.separation2 .carte1, .separation2 .carte2, .separation2 .carte3 {
+    height: 250px;
+    width: 100%;
+}
+
+.separation2 .r-fondNoir1, .separation2 .r-fondNoir2, .separation2 .r-fondNoir3 {
+    height: 250px;
+}
+
+.separation2 .detail {
+    height: 210px;
+}
+
+
+/* SEPARATION 3 - CHOIX ENTRE LES SOINS SPA */
+.separation3 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.separation3>div {
+    width: 100%;
+}
+
+.separation3 .soin1, .separation3 .soin2, .separation3 .soin3, .separation3 .soin4, .separation3 .soin5 {
+    height: 150px;
+    width: 100%;
+}
+
+.separation3 .s-fondNoir1, .separation3 .s-fondNoir2, .separation3 .s-fondNoir3, .separation3 .s-fondNoir4, .separation3 .s-fondNoir5 {
+    height: 150px;
+}
+
+.separation3 .detail {
+    height: 110px;
+}
+
+
+/* FORMULAIRE DE RESERVATION */
+.reservationForm>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TABLEAU RECAPITULATIF DE COMMANDE */
+table {
+    font-size: 0.8rem;
+}
+
+
+/* PIED DE PAGE */
+footer{
+    padding: 10px;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+}

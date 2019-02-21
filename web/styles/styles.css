@@ -1,0 +1,1782 @@
+/* REINITIALISATION DES MARGES */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* IMPORTATION DES FONTS */
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+@font-face {
+    font-family: 'sinkin_light';
+    src: url('../fonts/SinkinSans-300Light-webfont.eot');
+    src: url('../fonts/SinkinSans-300Light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SinkinSans-300Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* STYLE GENERAL DU CONTENU */
+body {
+    background: url(../files/bg.jpg) fixed;
+    font-family: 'sinkin_light', sans-serif;
+}
+
+
+h1, h2, nav {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+}
+
+
+/* LISTE A PUCE */
+.planDuSite li {
+    list-style-type: none;
+    padding: 5px;
+    text-indent: 10px;
+}
+
+.listeEnfant li {
+    list-style-type: none;
+    text-indent: 20px;
+}
+
+.listeEnfant li:before {
+    color: #b3995d;
+    content: "> ";
+}
+
+.planDuSite li a{
+    color: black;
+}
+
+.planDuSite li a:hover{
+    color: #b3995d;
+}
+
+
+/* FORMULAIRE */
+form div {
+    margin: 20px;
+}
+
+label {
+    display: block;
+}
+
+.champ {
+    border: 1px solid #b3995d;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+}
+
+textarea {
+    border: 1px solid #b3995d;
+    height: 100px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+}
+
+.bouton-envoi {
+    background-color: #b3995d;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+}
+
+.bouton-envoi:hover {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #b3995d;
+    background-color: #fff;
+    color: #b3995d;
+    cursor: pointer;
+}
+
+.erreur {
+    color: #ff0000;
+}
+
+
+/* CARTE INTERACTIVE */
+.maps {
+    border: none;
+    height: 500px;
+    width: 100%;
+}
+
+
+/* EN-TETE */
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    min-height: 50px;
+    padding: 5px;
+    border-bottom: 1px solid #b3995d;
+    background-color: #fff; /* rgba(255, 255, 255, 0.5) f4f3ef */
+    color: black;
+}
+
+
+/* BOUTON RESERVER */
+#reservation {
+    background-color: #343639;
+    border: 1px solid #b3995d;
+    border-radius: 3px;
+    height: 40px;
+    width: 100px;
+    
+}
+
+#reservation:hover {
+    border: 1px solid #b3995d;
+    background-color: #b3995d;
+    color: #343639;
+    cursor: pointer;
+}
+
+#reservation a {
+    display: block;
+    color: #b3995d;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    padding: 9px 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#reservation a:hover {
+    color: #fff;
+}
+
+
+/* OPTIONS */
+#header-options {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -5px;
+    right: -5px;
+}
+
+#header-options img {
+    height: 24px;
+}
+
+
+/* PANIER */
+#panier {
+    background-color: #b3995d;
+    height: 40px;
+    text-decoration: none;
+    padding: 4px;
+    width: 40px;
+}
+
+#panier:hover {
+    background-color: #fff;
+}
+
+#panier a {
+    height: 32px;
+    width: 32px;
+}
+
+#panier img {
+    height: 32px;
+}
+
+#panier img:hover {
+    position: relative;
+    left: -32px;
+}
+
+
+/* BARRE DE RECHERCHE */
+#recherche {
+    background-color: #b3995d;
+    display: flex;
+    height: 40px;
+    width: 225px;
+}
+
+#recherche label {
+    background-color: #fff;
+    margin: 5px 0 5px 5px;
+    padding: 3px;
+}
+
+#recherche input[type="search"] {
+    background-color: #fff;
+    border: none;
+    color: black;
+    height: 30px;
+    margin: 5px 0;
+    text-indent: 5px;
+    width: 147px;
+}
+
+#recherche input[type="submit"] {
+    background-color: #fff;
+    border: none;
+    border-left: 1px solid #b3995d;
+    color: #b3995d;
+    margin: 5px 5px 5px 0;
+    width: 40px;
+}
+
+
+/* MENU LANGUES */
+#langues {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+}
+
+#boutonLangues {
+    background-color: #b3995d;
+    color: #fff;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+#boutonLangues:hover {
+    background-color: #fff;
+    color: #b3995d;
+}
+
+#menuLangues {
+    background-color: #b3995d;
+    border: 1px solid #b3995d;
+    color: #fff;
+    display: none;
+    text-align: center;
+}
+
+#menuLangues li {
+    list-style: none;
+    padding: 4px;
+}
+
+#menuLangues li:hover {
+    background-color: #fff;
+    color: #b3995d;
+}
+
+
+/* MENU 1 - BOUTON HAMBURGER DU MENU PRINCIPAL */
+#nav-icon1  {
+  width: 30px; /* 60 */
+  height: 22.5px; /* 45 */
+  position: relative;
+  margin: 5px; /* 15 */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span  {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #b3995d;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1)  {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2)  {
+  top: 9px; /* 18 */
+}
+
+#nav-icon1 span:nth-child(3)  {
+  top: 18px; /* 36 */
+}
+
+#nav-icon1.open span:nth-child(1)  {
+  top: 9px; /* 18 */
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2)  {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3)  {
+  top: 9px; /* 18 */
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+/* MENU 2 - SOUS-MENU A GAUCHE */
+.sousMenuStyle1 {
+    display: block;
+    text-align: center;
+    transition: 0.30s ease;
+    width: 100%;
+}
+
+.sousMenuStyle1.active .arrow {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.sousMenuStyle1.active .arrow:before {
+    transform: translate(10px, 0);
+}
+
+.sousMenuStyle1.active .arrow:after {
+    transform: rotate(90deg) translate(10px, 0);
+}
+
+.sousMenuStyle1.active ul {
+    opacity: 1;
+    height: auto; /* 108 */
+}
+
+.arrow {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    left: -10px;
+    transition: 0.4s ease;
+    margin-top: 2px;
+    text-align: left;
+    transform: rotate(45deg);
+    float: right;
+}
+
+.arrow:before, .arrow:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background-color: #b3995d;
+    transition: 0.4s ease;
+}
+
+.arrow:after {
+    position: absolute;
+    transform: rotate(90deg);
+    top: -5px;
+    left: 5px;
+}
+
+.click-text {
+    display: block;
+    text-align: left;
+    padding: 6px; /* 0 12px 16px */
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #b3995d;
+    border: 1px solid #b3995d;
+    transition: 0.30s ease;
+}
+
+.click-text:hover {
+    color: #b3995d;
+    background-color: #fff;
+}
+
+.menu2First {
+    border-top: none;
+}
+
+.sousMenuStyle1 ul {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s ease;
+    background-color: #fff;
+    border-left: 1px solid #b3995d;
+    border-right: 1px solid #b3995d;
+}
+
+.sousMenuStyle1 li {
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sousMenuStyle1 li:hover {
+    background-color: #b3995d;
+}
+
+.sousMenuStyle1 a {
+    display: block;
+    padding: 4px 12px;
+    color: #000;
+}
+
+.sousMenuStyle1 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sousMenuStyle2 {
+    background-color: #b3995d;
+    border: 1px solid #b3995d;
+}
+
+.sousMenuStyle2:last-child {
+    border-top: none;
+}
+
+.sousMenuStyle2 a {
+    color: white;
+    display: block;
+    padding: 5px;
+    text-align: left;
+}
+
+.sousMenuStyle2 a:hover {
+    background-color: white;
+    color: #b3995d;
+    text-decoration: none;
+}
+
+
+/* PARTIE PRINCIPALE DE LA PAGE */
+main {
+    background-color: #fff;
+}
+
+main a {
+    color: #b3995d;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTENU CENTRAL */
+.pageAccueil {
+    display: block;
+}
+
+section{
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    text-align: justify;
+}
+
+.w100{
+    width: 100%;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.ariane p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+/* BANNIERE DE RESERVATION A DROITE */
+aside {
+    background-color: #343639;
+    border: 1px solid #b3995d;
+    border-top: none;
+    color: #b3995d;
+    font-size: 0.8rem;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+aside>div {
+    margin: 20px 0;
+}
+
+aside h2 {
+    margin: 0;
+}
+
+aside h3 {
+    margin: 40px 0;
+    margin-bottom: 5px;
+}
+
+aside p {
+    padding: 3px 0;
+}
+aside .reservationForm div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+aside label, aside input, aside #from, aside #to, aside #nbChambre, aside #nbAdulte, aside #nbEnfant {
+    width: 100%;
+}
+
+
+/* PIED DE PAGE */
+footer {
+    background-color: #ffffff; /* f4f3ef */
+    border-top: 1px solid #b3995d;
+    color: black;
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: #b3995d;
+    padding: 10px;
+    text-align: center;
+}
+
+#newsletter {
+    background-color: #fff;
+    border: 2px solid #b3995d;
+    border-radius: 25px;
+    height: 50px;
+    margin: 5px;
+}
+
+#newsletter:hover {
+    background-color: #b3995d;
+}
+
+#newsletter a {
+    color: #b3995d;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    padding: 15px 10px;
+    text-decoration: none;
+}
+
+#newsletter a:hover {
+    color: #fff;
+}
+
+footer img {
+    height: 50px;
+}
+
+footer ul {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #b3995d;
+}
+
+footer ul:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+footer li {
+    padding: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #b3995d;
+}
+
+
+/* BOUTON HAUT DE PAGE */
+#hautDePage {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: url("../files/arrow-up.png") #b3995d center no-repeat;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    bottom: 10px;
+    display: none;
+    height: 60px;
+    padding: 0;
+    position: fixed;
+    right: 10px;
+    width: 60px;
+}
+
+#hautDePageLien {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+/* BOUTON EN SAVOIR PLUS DE LA PAGE D'ACCUEIL */
+.enSavoirPlus {
+    background-color: #fff;
+    border: 1px solid #b3995d;
+    border-bottom: none;
+    display: none;
+    font-weight: bold;
+    height: 75px;
+    padding: 10px;
+    width: 100%;
+}
+
+.enSavoirPlusLien {
+    color: #b3995d;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.enSavoirPlusLien:hover {
+    text-decoration: none;
+}
+
+
+/* CARROUSEL */
+.s-wrap  {
+    width: 100%;
+    padding-bottom: 46%;
+    position: relative;
+    overflow: hidden;
+}
+
+.s-wrap .s-content  {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    font-size: 0;
+    list-style: none;
+    transition: transform 1s;
+}
+
+.s-wrap .s-item  {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s-type-1 .s-control  {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    transition-timing-function: ease-out;
+}
+
+.s-type-1 .s-control > label[class^="s-c-"]  {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.s-type-1 .s-nav label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    padding: 5px 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.s-type-1 .s-nav label::before, .s-type-1 .s-nav label::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 34px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.s-type-1 .s-nav label::before {
+    margin-bottom: -12px;
+}
+
+.s-type-1 .s-nav label.left {
+    left: 20px;
+}
+
+.s-type-1 .s-nav label.left::before {
+    transform: rotate(45deg);
+}
+
+.s-type-1 .s-nav label.left::after {
+    transform: rotate(-45deg);
+}
+
+.s-type-1 .s-nav label.right {
+    right: 20px;
+}
+
+.s-type-1 .s-nav label.right::before {
+    transform: rotate(-45deg);
+}
+
+.s-type-1 .s-nav label.right::after {
+    transform: rotate(45deg);
+}
+
+.s-type-1 #s-1:checked ~ .s-content {
+    transform: translateX(0%);
+}
+
+.s-type-1 #s-1:checked ~ .s-control .s-c-1 {
+    background-color: #b3995d;
+}
+
+.s-type-1 #s-1:checked ~ .s-nav .s-nav-1 {
+    display: block;
+}
+
+.s-type-1 #s-2:checked ~ .s-content {
+    transform: translateX(-25%);
+}
+
+.s-type-1 #s-2:checked ~ .s-control .s-c-2 {
+    background-color: #b3995d;
+}
+
+.s-type-1 #s-2:checked ~ .s-nav .s-nav-2  {
+    display: block;
+}
+
+.s-type-1 #s-3:checked ~ .s-content  {
+    transform: translateX(-50%);
+}
+
+.s-type-1 #s-3:checked ~ .s-control .s-c-3  {
+    background-color: #b3995d;
+}
+
+.s-type-1 #s-3:checked ~ .s-nav .s-nav-3  {
+    display: block;
+}
+
+.s-type-1 #s-4:checked ~ .s-content  {
+    transform: translateX(-75%);
+}
+
+.s-type-1 #s-4:checked ~ .s-control .s-c-4  {
+    background-color: #b3995d;
+}
+
+.s-type-1 #s-4:checked ~ .s-nav .s-nav-4  {
+    display: block;
+}
+
+
+/* CARROUSEL ACCUEIL */
+.s-home {
+    top: -100px;
+}
+
+.m-100 {
+    margin-top: -100px;
+}
+
+.s-home .s-item-1 {
+    background-image: url("../files/hotel/hotel-1.jpg");
+}
+
+.s-home .s-item-2 {
+    background-image: url("../files/hotel/hotel-2.jpg");
+}
+
+.s-home .s-item-3 {
+    background-image: url("../files/restaurant/restaurant-1.jpg");
+}
+
+.s-home .s-item-4 {
+    background-image: url("../files/spa/spa-1.jpg");
+}
+
+
+/* CARROUSEL CHAMBRES */
+.s-room1 .s-item-1 {
+    background-image: url("../files/chambres/classique-1.jpg");
+}
+
+.s-room1 .s-item-2 {
+    background-image: url("../files/chambres/classique-2.jpg");
+}
+
+.s-room1 .s-item-3 {
+    background-image: url("../files/chambres/classique-3.jpg");
+}
+
+.s-room1 .s-item-4 {
+    background-image: url("../files/chambres/classique-4.jpg");
+}
+
+.s-room2 .s-item-1 {
+    background-image: url("../files/chambres/confort-1.jpg");
+}
+
+.s-room2 .s-item-2 {
+    background-image: url("../files/chambres/confort-2.jpg");
+}
+
+.s-room2 .s-item-3 {
+    background-image: url("../files/chambres/confort-3.jpg");
+}
+
+.s-room2 .s-item-4 {
+    background-image: url("../files/chambres/confort-4.jpg");
+}
+
+.s-room3 .s-item-1 {
+    background-image: url("../files/chambres/deluxe-1.jpg");
+}
+
+.s-room3 .s-item-2 {
+    background-image: url("../files/chambres/deluxe-2.jpg");
+}
+
+.s-room3 .s-item-3 {
+    background-image: url("../files/chambres/deluxe-3.jpg");
+}
+
+.s-room3 .s-item-4 {
+    background-image: url("../files/chambres/deluxe-4.jpg");
+}
+
+.s-suite .s-item-1 {
+    background-image: url("../files/chambres/suite-1.jpg");
+}
+
+.s-suite .s-item-2 {
+    background-image: url("../files/chambres/suite-2.jpg");
+}
+
+.s-suite .s-item-3 {
+    background-image: url("../files/chambres/suite-3.jpg");
+}
+
+.s-suite .s-item-4 {
+    background-image: url("../files/chambres/suite-4.jpg");
+}
+
+
+/* CARROUSEL SPA */
+.s-spa .s-item-1 {
+    background-image: url("../files/spa/spa-1.jpg");
+}
+
+.s-spa .s-item-2 {
+    background-image: url("../files/spa/spa-2.jpg");
+}
+
+.s-spa .s-item-3 {
+    background-image: url("../files/spa/spa-3.jpg");
+}
+
+.s-spa .s-item-4 {
+    background-image: url("../files/spa/spa-4.jpg");
+}
+
+
+/* CARROUSEL HOTEL */
+.s-hotel .s-item-1 {
+    background-image: url("../files/hotel/hotel-1.jpg");
+}
+
+.s-hotel .s-item-2 {
+    background-image: url("../files/hotel/hotel-2.jpg");
+}
+
+.s-hotel .s-item-3 {
+    background-image: url("../files/restaurant/restaurant-1.jpg");
+}
+
+.s-hotel .s-item-4 {
+    background-image: url("../files/restaurant/carte_restaurant2.png");
+}
+
+
+/* PAGE ACCUEIL */
+.accueilChambres {
+    border: 1px solid #b3995d;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.accueilChambres .description {
+    width: 35%;
+    margin: 0;
+}
+
+.accueilChambres .description img {
+    max-height: 100px;
+    margin-bottom: 50px;
+}
+
+.accueilChambres .separation1 {
+    border: none;
+    border-left: 1px solid #b3995d;
+    width: 65%;
+}
+
+.accueilRestaurant {
+    border: 1px solid #b3995d;
+    border-bottom: none;
+}
+
+.accueilRestaurant .separation2 {
+    border: none;
+}
+
+.accueilRestaurant .separation2 .detailRestaurant {
+    border-left: 1px solid #b3995d;
+    border-right: none;
+}
+
+.accueilRestaurant .detailRestaurant h2 {
+    text-align: center;
+}
+
+.accueilSpa {
+    border: 1px solid #b3995d;
+    border-bottom: none;
+}
+
+.accueilSpa .separation3 {
+    border: none;
+}
+
+.accueilSpa .separation3 .detailSpa {
+    border-left: none;
+    border-right: 1px solid #b3995d;
+    width: 65%;
+}
+
+.accueilSpa .separation3 .soins {
+    width: 35%;
+}
+
+.accueilHotel {
+    border: 1px solid #b3995d;
+    border-bottom: none;
+}
+
+.accueilHotel .detailHotel {
+    padding: 75px 50px;
+    text-align: center;
+}
+
+
+/* SEPARATION 1 - CHOIX ENTRE LES CHAMBRES ET LA SUITE */
+.separation1 {
+    border-left: 1px solid #b3995d;
+    border-right: 1px solid #b3995d;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.separation1 .chambre1 {
+    background: url('../files/chambres/classique-1.jpg') no-repeat center;
+    background-size: cover;
+    border-right: 1px solid #b3995d;
+    border-bottom: 1px solid #b3995d;
+    height: 400px;
+    width: 50%;
+}
+
+.separation1 .chambre2 {
+    background: url('../files/chambres/confort-1.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 400px;
+    width: 50%;
+}
+
+.separation1 .chambre3 {
+    background: url('../files/chambres/deluxe-1.jpg') no-repeat center;
+    background-size: cover;
+    border-right: 1px solid #b3995d;
+    height: 400px;
+    width: 50%;
+}
+
+.separation1 .chambre4 {
+    background: url('../files/chambres/suite-1.jpg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 50%;
+}
+
+.separation1 .c-fondNoir1, .separation1 .c-fondNoir2, .separation1 .c-fondNoir3, .separation1 .c-fondNoir4 {
+    height: 400px;
+    padding: 20px;
+}
+
+.separation1 .detail {
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    justify-content: center;
+    padding: 10px;
+    text-shadow: 0 0 3px #000;
+}
+
+.separation1 .detail h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.separation1 [class*=chambre] a {
+    text-decoration: none;
+}
+
+
+/* CHAMBRES ET SUITES - CARTES RESTAURANT - SOINS SPA */
+.description {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.description p {
+    margin: 10px;
+}
+
+.description span {
+    color: #b3995d;
+}
+
+.description ul {
+    border: 1px solid #b3995d;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.description li {
+    list-style: none;
+    padding: 5px;
+}
+
+.description li:nth-child(odd) {
+    background-color: #eee;
+}
+
+.services {
+    border: 1px solid #b3995d;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.services li {
+    list-style: none;
+    padding: 5px;
+}
+
+.services li:nth-child(odd) {
+    background-color: #eee;
+}
+
+
+/* SEPARATION 2 - CHOIX ENTRE LES CARTES DU RESTAURANT */
+.separation2 {
+    border-left: 1px solid #b3995d;
+    border-right: 1px solid #b3995d;
+    display: flex;
+}
+
+.separation2 .detailRestaurant {
+    align-items: center;
+    background-color: #112a49;
+    border-right: 1px solid #b3995d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.detailRestaurant img {
+    margin: 50px;
+}
+
+.detailRestaurant h1 {
+    text-align: center;
+}
+
+.detailRestaurant p {
+    padding: 10px;
+    text-align: center;
+}
+
+.separation2>div {
+    width: 50%;
+}
+
+.separation2 .carte1 {
+    background: url('../files/restaurant/carte_restaurant1.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 250px;
+}
+
+.separation2 .carte2 {
+    background: url('../files/restaurant/carte_restaurant2.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 250px;
+}
+
+.separation2 .carte3 {
+    background: url('../files/restaurant/carte_restaurant3.jpg') no-repeat center;
+    background-size: cover;
+    height: 250px;
+}
+
+.separation2 .r-fondNoir1, .separation2 .r-fondNoir2, .separation2 .r-fondNoir3 {
+    height: 250px;
+    padding: 20px;
+}
+
+.separation2 .detail {
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    height: 210px;
+    justify-content: center;
+    padding: 10px;
+    text-shadow: 0 0 3px #000;
+}
+
+.separation2 .detail h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.separation2 [class*=carte] a {
+    text-decoration: none;
+}
+
+
+/* SEPARATION 3 - CHOIX ENTRE LES SOINS SPA */
+.separation3 {
+    border-left: 1px solid #b3995d;
+    border-right: 1px solid #b3995d;
+    display: flex;
+}
+
+.separation3 .detailSpa {
+    align-items: center;
+    background-color: #467a4e;
+    border-left: 1px solid #b3995d;
+    color: #b3995d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.detailSpa img {
+    margin: 30px;
+}
+
+.detailSpa h1 {
+    text-align: center;
+}
+
+.detailSpa p {
+    padding: 10px;
+    text-align: center;
+}
+
+.separation3>div {
+    width: 50%;
+}
+
+.separation3 .soin1 {
+    background: url('../files/spa/soin-1.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 150px;
+}
+
+.separation3 .soin2 {
+    background: url('../files/spa/soin-2.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 150px;
+}
+
+.separation3 .soin3 {
+    background: url('../files/spa/soin-3.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 150px;
+}
+
+.separation3 .soin4 {
+    background: url('../files/spa/soin-4.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 1px solid #b3995d;
+    height: 150px;
+}
+
+.separation3 .soin5 {
+    background: url('../files/spa/soin-5.jpg') no-repeat center;
+    background-size: cover;
+    height: 150px;
+}
+
+.separation3 .s-fondNoir1, .separation3 .s-fondNoir2, .separation3 .s-fondNoir3, .separation3 .s-fondNoir4, .separation3 .s-fondNoir5 {
+    height: 150px;
+    padding: 20px;
+}
+
+.separation3 .detail {
+    align-items: center;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    height: 110px;
+    justify-content: center;
+    padding: 10px;
+    text-shadow: 0 0 3px #000;
+}
+
+.separation3 .detail h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.separation3 [class*=soin] a {
+    text-decoration: none;
+}
+
+
+/* PAGE CARTES POUR LE RESTAURANT */
+.carte {
+    background-color: #112a49;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.carte>div {
+    border: 3px solid #fff;
+    padding: 100px 20px;
+}
+
+.carte h1 {
+    border: 2px solid #fff;
+    margin: 75px auto;
+    margin-top: 0;
+    padding: 10px 20px;
+    width: 240px;
+}
+
+.carte h2 {
+    margin: 100px 0;
+}
+
+.carte h3 {
+    margin: 75px 0;
+}
+
+.carte p {
+    margin: 30px 0;
+}
+
+.carte .ou {
+    margin: 55px 0;
+}
+
+.carte .prix {
+    margin-top: 65px;
+}
+
+
+/* PAGE HOTEL */
+.pageHotel h1, h2 {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.pageHotel p {
+    margin: 10px 0;
+}
+
+.pageHotel ul {
+    padding-left: 30px;
+}
+
+.pageHotel iframe {
+    height: 350px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
+/* PAGE PRESSE */
+.presse {
+    border: 1px solid #b3995d;
+    display: flex;
+    margin: 20px 0;
+}
+
+.presse>div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.bouton a {
+    background-color: #b3995d;
+    border: 1px solid #b3995d;
+    color: #fff;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.bouton a:hover {
+    background-color: #fff;
+    color: #b3995d;
+    text-decoration: none;
+}
+
+
+/* PAGE RESERVATION ET PANIER */
+.pageReservation, .pagePanier {
+    background-color: #343639;
+}
+
+.pageReservation h1, .pagePanier {
+    color: #b3995d;
+    text-align: center;
+}
+
+.pagePanier .paiement {
+    margin: 20px 0;
+}
+
+.pagePanier .paiement a {
+    text-decoration: underline;
+}
+
+.pagePanier .paiement a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* CALENDRIER DE SELECTION DES DATES DE RESERVATION */
+div.datepicker {
+    align-items: center;
+    background: none\9;
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F70F141C,endColorstr=#F70F141C)";
+}
+.ui-datepicker-row-break {
+    display: none;
+    margin: 0 auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+    padding: 5px;
+}
+
+.ll-skin-melon {
+	font-size: 90%;
+}
+
+.ll-skin-melon .ui-widget {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	background: #343639;
+	border: none;
+}
+
+.ll-skin-melon .ui-datepicker {
+	padding: 0;
+}
+
+.ll-skin-melon .ui-datepicker-header {
+	border: none;
+	background: transparent;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+.ll-skin-melon .ui-datepicker-header .ui-state-hover {
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+    /*
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0; */
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-title {  
+    font-size: 19px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 45px;
+    color: #b3995d;
+    text-align: center;
+    padding-top: 17px;
+    text-transform: uppercase;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev-hover,
+.ll-skin-melon .ui-datepicker .ui-datepicker-next-hover,
+.ll-skin-melon .ui-datepicker .ui-datepicker-next,
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev {
+	top: .9em;
+	border:none;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev-hover {
+	left: 2px;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-next-hover {
+	right: 2px;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-next span,
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev span {
+	/* background-image: url(images/ui-icons_ffffff_256x240.png); */
+    background-position: -32px 0;
+	background-color: #b3995d;
+    margin-top: 0;
+	top: 17;
+	font-weight: normal;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-prev span {
+	background-position: -96px 0;
+}
+
+.ll-skin-melon .ui-datepicker table {
+	margin: 0;
+}
+
+.ll-skin-melon .ui-datepicker th {
+	font-weight: normal;
+    background: transparent;
+    border: none;
+    color: #b3995d;
+    cursor: text;
+    height: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.ll-skin-melon .ui-datepicker td {
+	background: rgba(255,255,255,0.05);
+	border: none;
+	padding: 0;
+}
+
+.ll-skin-melon td .ui-state-default {
+	background: transparent;
+	border: none;
+	text-align: center;
+	padding: .5em;
+	margin: 0;
+	font-weight: normal;
+	color: #b3995d;
+	font-size: 16px;
+}
+
+.ll-skin-melon .ui-state-disabled  {
+	opacity: 1;
+}
+
+.ll-skin-melon .ui-state-disabled .ui-state-default {
+	color: rgba(255, 255, 255, 0.1);
+}
+
+/*.ll-skin-melon td .ui-state-active,*/
+.ll-skin-melon td .ui-state-hover {
+	background: #343639 !important;
+}
+/****************************************/
+/****************************************/
+.ll-skin-melon td.dp-highlight .ui-state-default {
+    background: #b3995d;
+    color: #fff;
+}
+
+.ll-skin-melon .ui-datepicker td.dateFrom a,.ll-skin-melon .ui-datepicker td.dateTo a{
+    background: #b3995d;
+    color: #fff;
+}
+.ui-datepicker td.dp-highlight:first a , .ui-datepicker td.dp-highlight:last a{
+    background: #b3995d;
+}
+
+.ui-datepicker.ui-datepicker-multi  {
+    width: auto;
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block !important;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+    float:none;
+}
+#datepicker {
+    height: 300px;
+    overflow-x: scroll;
+}
+.ui-widget {
+    font-size: 100%
+}
+
+
+/* FORMULAIRE DE RESERVATION */
+.reservationForm {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 540px;
+}
+
+.reservationForm>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservationForm label, .reservationForm input, .reservationForm select {
+    background-color: transparent;
+    color: #b3995d;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.reservationForm input {
+    border: 1px solid #b3995d;
+    width: 210px;
+}
+
+.reservationForm select {
+    border: 1px solid #b3995d;
+    color: #b3995d;
+    width: 110px;
+}
+
+.reservationForm option {
+    background-color: #343639;
+    border: 1px solid #b3995d;
+}
+
+.reservationForm option:hover {
+    background-color: #b3995d;
+    color: #fff;
+}
+
+.reservationForm .bouton-envoi, .reservationForm .bouton-envoi:hover {
+    padding: 5px;
+    width: 100%;
+}
+
+
+/* TABLEAU RECAPITULATIF DE COMMANDE */
+table {
+    border-collapse: collapse;
+    margin: 100px 0;
+    width: 100%;
+}
+
+table caption {
+    font-size: 1.5em;
+}
+
+th, td {
+    border: 1px solid #b3995d;
+    padding: 15px 5px;
+}
+
+th {
+    background-color: #b3995d;
+    color: #fff;
+}
+
+
+/* PAGE AVIS */
+#ongletsAvis ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ongletsAvis li {
+    list-style-type: none;
+}
+
+#ongletsAvis li {
+    background-color: #b3995d;
+    border: 2px solid #fff;
+    border-bottom: none;
+    color: #fff;
+    display: block;
+    padding: 5px;
+    width: 24%;
+}
+
+#ongletsAvis li:hover {
+    background-color: #fff;
+    border: 1px solid #b3995d;
+    border-bottom: none;
+    color: #b3995d;
+    cursor: pointer;
+    text-decoration:none; 
+}
+
+.listeAvis {
+    border: 1px solid #b3995d;
+}
+
+#avisGeneral, #avisChambres, #avisRestaurant, #avisSpa {
+    display: none;
+}
+
+.avis {
+    border: 1px solid #b3995d;
+    display: flex;
+    margin: 5px;
+}
+
+.avis p {
+    padding: 5px;
+}
+
+.client {
+    border-right: 1px solid #b3995d;
+    min-height: 200px;
+    width: 200px;
+}
+
+.client p {
+    margin: 10px;
+    text-align: center;
+}
+
+
+/* PAGE ACTUALITES */
+article {
+    border: 1px solid #b3995d;
+    margin: 20px 0;
+    padding: 5px;
+}
+
+article h2 {
+    margin: 20px 0;
+}
+
+article h3 {
+    margin: 10px 0;
+}
+
+article p {
+    margin: 5px 0;
+}
+
+article img {
+    height: auto;
+    width: 100%;
+}
+
+article .auteur {
+    margin-top: 20px;
+}
+
+/* PAGE MENTIONS LEGALES ET CGV */
+.pageMentions h1 {
+    text-align: center;
+}
+
+.pageMentions h2 {
+    margin: 25px 0;
+}
+
+.pageMentions p {
+    margin: 10px 0;
+}
+
+.pageMentions ul {
+    padding-left: 30px;
+}

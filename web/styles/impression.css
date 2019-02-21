@@ -1,0 +1,7 @@
+header, #menu2, aside, footer {
+    display: none;
+}
+
+section {
+    width: 100%;
+}
